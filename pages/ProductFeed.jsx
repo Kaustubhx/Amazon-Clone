@@ -19,12 +19,14 @@ function ProductFeed({ products }) {
           />
         ))}
 
-      <Image
-        className="md:col-span-full"
-        src="https://links.papareact.com/dyz"
-        alt=""
-        width={1500} height={300}
-      />
+      <div className="md:col-span-full">
+        <Image
+          src="https://links.papareact.com/dyz"
+          alt=""
+          width={1500}
+          height={300}
+        />
+      </div>
 
       <div className="md:col-span-2">
         {products
