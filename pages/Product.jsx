@@ -21,7 +21,7 @@ function Product({ id, title, price, description, category, image }) {
         {category}
       </p>
 
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image src={image} height={200} width={200} objectFit="contain" alt=""/>
 
       <h4 className="my-3 ">{title}</h4>
 
@@ -29,7 +29,7 @@ function Product({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-500" />
+            <StarIcon key={id} className="h-5 text-yellow-500"/>
           ))}
       </div>
 
@@ -38,7 +38,7 @@ function Product({ id, title, price, description, category, image }) {
 
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
-          <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
+          <Image className="w-12" src="https://links.papareact.com/fdw" alt=""/>
           <p className="text-xs text-gray-500">FREE Next-Day Delivery</p>
         </div>
       )}
